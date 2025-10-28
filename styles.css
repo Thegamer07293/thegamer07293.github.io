@@ -1,0 +1,281 @@
+/* --- Definición de Colores --- */
+:root {
+    --color-azul-profundo: #003366; /* Azul Oscuro, casi marino */
+    --color-dorado: #FFD700; /* Dorado Estándar */
+    --color-azul-rey: #007bff; /* Azul para títulos */
+    --color-fondo-claro: #f8f9fa;
+    --color-texto-claro: #ffffff;
+}
+
+/* --- Estilos Generales --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body {
+    line-height: 1.6;
+    background-color: var(--color-fondo-claro);
+    color: #333;
+}
+
+/* --- Encabezado y Menú (Azul Profundo y Dorado) --- */
+.header {
+    background-color: var(--color-azul-profundo);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 5%;
+}
+
+.logo {
+    color: var(--color-dorado);
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.nav-list {
+    list-style: none;
+    display: flex;
+}
+
+.nav-list a {
+    color: var(--color-texto-claro);
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    display: block;
+    transition: color 0.3s;
+}
+
+.nav-list a:hover {
+    color: var(--color-dorado);
+}
+
+/* --- Menú Desplegable (Estático) --- */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: var(--color-azul-profundo);
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    top: 100%; /* Aparece debajo del elemento principal */
+    left: 0;
+}
+
+.dropdown-content a {
+    color: var(--color-texto-claro);
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #004d99; /* Tono de azul más claro al pasar el ratón */
+    color: var(--color-dorado);
+}
+
+.dropdown:hover .dropdown-content {
+    display: block; /* Muestra el menú al pasar el ratón por "Información" */
+}
+
+/* --- Sección Principal (Hero) con Imagen Oscura de Fondo --- */
+.hero-section {
+    position: relative;
+    height: 80vh; /* Altura de la sección */
+    background: url('https://i.imgur.com/W2o5F6w.jpeg'); /* Reemplaza con una imagen de la tienda o electrónica */
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Capa de opacidad oscura (Overlay) */
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6); /* Negro con 60% de opacidad para oscurecer el fondo */
+    color: var(--color-texto-claro);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.hero-overlay h2 {
+    font-size: 3rem;
+    color: var(--color-dorado);
+    margin-bottom: 0.5rem;
+}
+
+.hero-overlay p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+/* Botones */
+.btn-primary {
+    background-color: var(--color-dorado);
+    color: var(--color-azul-profundo);
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.btn-primary:hover {
+    background-color: #e6b800; /* Dorado ligeramente más oscuro */
+}
+
+/* --- Estilos para Secciones de Contenido --- */
+.main-content {
+    padding: 2rem 5%;
+}
+
+.content-section {
+    padding: 40px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+.content-section:last-child {
+    border-bottom: none;
+}
+
+.content-section h3 {
+    font-size: 2rem;
+    color: var(--color-azul-rey);
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.content-section p {
+    max-width: 800px;
+    margin: 0.5rem auto;
+    text-align: justify;
+}
+
+/* Espacio vacío para Misión y Visión */
+.empty-space {
+    border: 2px dashed var(--color-azul-rey);
+    padding: 30px;
+    max-width: 800px;
+    margin: 20px auto;
+    background-color: #eaf3ff; /* Azul muy claro */
+}
+
+.placeholder-text {
+    text-align: center !important;
+    color: var(--color-azul-profundo);
+    font-style: italic;
+    font-size: 1.1rem;
+    margin: 10px 0 !important;
+}
+
+.map-placeholder {
+    height: 300px;
+    background-color: #ccc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px auto;
+    max-width: 800px;
+    color: #555;
+    font-weight: bold;
+}
+
+.note {
+    text-align: center !important;
+    font-size: 0.9rem;
+    color: #666;
+    margin-top: 10px !important;
+}
+
+/* --- Pie de Página (Contacto) --- */
+.footer {
+    background-color: var(--color-azul-profundo);
+    color: var(--color-texto-claro);
+    padding: 40px 5%;
+    text-align: center;
+}
+
+.contact-info h4 {
+    color: var(--color-dorado);
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    margin: 20px auto;
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid var(--color-dorado); /* Borde dorado */
+    border-radius: 5px;
+    background-color: #1a4f80; /* Fondo azul más oscuro para los campos */
+    color: var(--color-texto-claro);
+}
+
+.contact-form textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+    color: #ccc;
+}
+
+.btn-secondary {
+    background-color: var(--color-dorado);
+    color: var(--color-azul-profundo);
+    padding: 10px 20px;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn-secondary:hover {
+    background-color: #e6b800;
+}
+
+.copyright {
+    margin-top: 20px;
+    font-size: 0.8rem;
+    color: #b0c4de; /* Azul claro */
+}
+
+/* Estilos de anclaje (para asegurar que el desplazamiento sea suave) */
+html {
+    scroll-behavior: smooth;
+}
