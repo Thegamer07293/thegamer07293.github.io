@@ -89,10 +89,11 @@ body {
     display: block;
 }
 
+/* VERIFICACIÓN DE IMAGEN: Ruta confirmada. */
 .hero-section {
     position: relative;
     height: 80vh;
-    background: url('img/empresa.jpg');
+    background: url('img/empresa.jpg'); 
     background-size: cover;
     background-position: center;
     text-align: center;
@@ -111,7 +112,7 @@ body {
     color: var(--color-texto-claro);
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: center; /* Centra el texto verticalmente */
     align-items: center;
     padding: 20px;
 }
@@ -127,19 +128,7 @@ body {
     margin-bottom: 2rem;
 }
 
-.btn-primary {
-    background-color: var(--color-dorado);
-    color: var(--color-azul-profundo);
-    padding: 10px 20px;
-    text-decoration: none;
-    border-radius: 5px;
-    font-weight: bold;
-    transition: background-color 0.3s;
-}
-
-.btn-primary:hover {
-    background-color: #e6b800;
-}
+/* ESTILOS DE .btn-primary ELIMINADOS */
 
 .main-content {
     padding: 2rem 5%;
