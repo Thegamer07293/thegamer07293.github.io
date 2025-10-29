@@ -43,7 +43,7 @@ body {
 
 .logo img {
     height: 100%; 
-    width: auto;
+    width: 180px;
     display: block;
     object-fit: contain;
 }
