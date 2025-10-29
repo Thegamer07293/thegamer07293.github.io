@@ -35,9 +35,14 @@ body {
 }
 
 .logo {
-    color: var(--color-dorado);
     font-size: 1.5rem;
     font-weight: bold;
+}
+
+.logo img {
+    height: 40px; 
+    width: auto;
+    display: block;
 }
 
 .nav-list {
@@ -89,7 +94,6 @@ body {
     display: block;
 }
 
-/* VERIFICACIÓN DE IMAGEN: Ruta confirmada. */
 .hero-section {
     position: relative;
     height: 80vh;
@@ -112,7 +116,7 @@ body {
     color: var(--color-texto-claro);
     display: flex;
     flex-direction: column;
-    justify-content: center; /* Centra el texto verticalmente */
+    justify-content: center; 
     align-items: center;
     padding: 20px;
 }
@@ -127,8 +131,6 @@ body {
     font-size: 1.2rem;
     margin-bottom: 2rem;
 }
-
-/* ESTILOS DE .btn-primary ELIMINADOS */
 
 .main-content {
     padding: 2rem 5%;
