@@ -100,7 +100,7 @@ body {
 .hero-section {
     position: relative;
     height: 80vh;
-    background: url('img/empresa.jpeg'); 
+    background: url('img/empresa.jpg'); 
     background-size: cover;
     background-position: center;
     text-align: center;
