@@ -37,15 +37,18 @@ body {
 .logo {
     font-size: 1.5rem;
     font-weight: bold;
+    /* Limitamos el ancho del contenedor del logo */
     max-width: 180px; 
     height: 40px; 
 }
 
+/* 🚀 AJUSTE CLAVE: Forzamos la imagen a caber en el espacio */
 .logo img {
     height: 100%; 
     width: auto;
     display: block;
-    object-fit: contain; 
+    object-fit: contain; /* Asegura que la imagen no se recorte ni distorsione */
+}
 
 .nav-list {
     list-style: none;
