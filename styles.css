@@ -13,12 +13,17 @@
     font-family: sans-serif;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     line-height: 1.6;
     background-color: var(--color-fondo-claro);
     color: #333;
 }
 
+/* --- CABECERA Y NAVEGACIÓN --- */
 .header {
     background-color: var(--color-azul-profundo);
     position: sticky;
@@ -37,12 +42,12 @@ body {
 .logo {
     font-size: 1.5rem;
     font-weight: bold;
-    height: 40px; 
+    height: 40px;
     max-width: 180px;
 }
 
 .logo img {
-    height: 100%; 
+    height: 100%;
     width: 180px;
     display: block;
     object-fit: contain;
@@ -97,10 +102,11 @@ body {
     display: block;
 }
 
+/* --- SECCIÓN HERO --- */
 .hero-section {
     position: relative;
     height: 80vh;
-    background: url('img/empresa.jpg'); 
+    background: url('img/empresa.jpg');
     background-size: cover;
     background-position: center;
     text-align: center;
@@ -119,7 +125,7 @@ body {
     color: var(--color-texto-claro);
     display: flex;
     flex-direction: column;
-    justify-content: center; 
+    justify-content: center;
     align-items: center;
     padding: 20px;
 }
@@ -135,6 +141,7 @@ body {
     margin-bottom: 2rem;
 }
 
+/* --- CONTENIDO PRINCIPAL --- */
 .main-content {
     padding: 2rem 5%;
 }
@@ -142,10 +149,6 @@ body {
 .content-section {
     padding: 40px 0;
     border-bottom: 1px solid #ddd;
-}
-
-.content-section:last-child {
-    border-bottom: none;
 }
 
 .content-section h3 {
@@ -169,6 +172,7 @@ body {
     text-align: justify;
 }
 
+/* Misión y Visión (Flexbox en escritorio) */
 #mision-vision {
     display: flex;
     justify-content: space-around;
@@ -178,7 +182,8 @@ body {
     flex-wrap: wrap;
 }
 
-.mision-division, .vision-division {
+.mision-division,
+.vision-division {
     flex: 1;
     min-width: 300px;
     border: 2px dashed var(--color-azul-rey);
@@ -207,13 +212,7 @@ body {
     font-weight: bold;
 }
 
-.note {
-    text-align: center !important;
-    font-size: 0.9rem;
-    color: #666;
-    margin-top: 10px !important;
-}
-
+/* --- PIE DE PÁGINA --- */
 .footer {
     background-color: var(--color-azul-profundo);
     color: var(--color-texto-claro);
@@ -227,14 +226,29 @@ body {
     padding: 20px;
 }
 
+/* Estilo del Botón Manual de Usuario */
+.manual-button {
+    display: block;
+    width: 250px;
+    margin: 25px auto 0;
+    padding: 10px 20px;
+    background-color: var(--color-dorado);
+    color: var(--color-azul-profundo);
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    font-size: 1.1rem;
+}
+
+.manual-button:hover {
+    background-color: #e6c200;
+}
+
 .contact-info-container h4 {
     color: var(--color-dorado);
     font-size: 1.5rem;
     margin-bottom: 1rem;
-}
-
-.contact-info-container p {
-    margin-bottom: 15px;
 }
 
 .contact-details {
@@ -272,6 +286,90 @@ body {
     color: #b0c4de;
 }
 
-html {
-    scroll-behavior: smooth;
+
+/* ####################################################### */
+/* ############## MEDIA QUERIES (ADAPTACIÓN A MÓVIL) ############# */
+/* ####################################################### */
+
+@media (max-width: 900px) {
+
+    /* El truco: Ocultar la lista y mostrarla solo al pasar el ratón o tocar (solo funciona parcialmente en móvil, pero es la opción sin JS) */
+    .nav {
+        flex-wrap: wrap; 
+        padding: 0.8rem 3%;
+        align-items: flex-start; /* Alinea logo arriba */
+    }
+
+    .nav-list {
+        display: none; /* Oculta la lista por defecto */
+        flex-direction: column;
+        width: 100%;
+        background-color: #002244; 
+        box-shadow: 0 4px 5px rgba(0, 0, 0, 0.2);
+        
+        /* Ajuste para que la lista aparezca debajo del logo */
+        position: static; 
+        z-index: 900; 
+    }
+
+    /* Al pasar el cursor sobre el NAV (simula menú 'abierto' sin JS) */
+    .nav:hover .nav-list {
+        display: flex; 
+    }
+
+    .nav-list li {
+        width: 100%;
+        border-top: 1px solid #004d99;
+        text-align: center;
+    }
+    
+    .dropdown {
+        width: 100%;
+    }
+    
+    .dropdown-content {
+        position: static; 
+        width: 100%;
+        box-shadow: none;
+        background-color: #004d99; 
+    }
+
+    .dropdown-content a {
+        padding-left: 10px; 
+    }
+
+    /* --- CONTENIDO --- */
+    .hero-section {
+        height: 50vh; 
+    }
+
+    .hero-overlay h2 {
+        font-size: 1.8rem; 
+    }
+
+    #mision-vision {
+        flex-direction: column; 
+        gap: 20px;
+    }
+
+    .mision-division,
+    .vision-division {
+        min-width: auto;
+    }
+
+    /* --- Contacto y Botón --- */
+    .contact-details {
+        text-align: center; 
+    }
+
+    .contact-details strong {
+        display: block; 
+        min-width: auto;
+        margin-bottom: 0;
+    }
+
+    .manual-button {
+        width: 90%;
+        font-size: 1rem;
+    }
 }
