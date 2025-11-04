@@ -23,7 +23,6 @@ body {
     color: #333;
 }
 
-/* --- CABECERA Y NAVEGACIÓN --- */
 .header {
     background-color: var(--color-azul-profundo);
     position: sticky;
@@ -139,6 +138,7 @@ body {
     font-size: 1.2rem;
     margin-bottom: 2rem;
 }
+
 .main-content {
     padding: 2rem 5%;
 }
@@ -169,23 +169,24 @@ body {
     text-align: justify;
 }
 
-#mision-vision {
-    display: flex;
-    justify-content: space-around;
+.mision-vision-container {
     max-width: 900px;
     margin: 0 auto;
-    gap: 30px;
-    flex-wrap: wrap;
-}
-
-.mision-division,
-.vision-division {
-    flex: 1;
-    min-width: 300px;
     border: 2px dashed var(--color-azul-rey);
     padding: 20px;
     background-color: #eaf3ff;
     border-radius: 8px;
+}
+
+.mision-vision-container p {
+    max-width: none;
+    margin: 0;
+}
+
+#mision-vision {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0;
 }
 
 .placeholder-text {
@@ -197,23 +198,23 @@ body {
 }
 
 .map-placeholder {
-    height: 300px;
-    background-color: #ccc;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    text-align: center;
     margin: 20px auto;
     max-width: 800px;
-    color: #555;
-    font-weight: bold;
-}
-.map-placeholder img {
-    max-width: 100%;
-    height: auto;
-    display: block;
-    border: 1px solid #ddd;
+    padding: 0;
+    overflow: hidden;
     border-radius: 4px;
+    border: 1px solid #ddd;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
+
+.map-placeholder iframe {
+    width: 100%;
+    height: 400px;
+    display: block;
+    border: none;
+}
+
 .footer {
     background-color: var(--color-azul-profundo);
     color: var(--color-texto-claro);
@@ -226,6 +227,7 @@ body {
     margin: 0 auto;
     padding: 20px;
 }
+
 .manual-button {
     display: block;
     width: 250px;
@@ -284,7 +286,90 @@ body {
     font-size: 0.8rem;
     color: #b0c4de;
 }
+
+.manual-header {
+    background-color: var(--color-azul-profundo);
+    padding: 10px 0;
+    text-align: center;
+}
+
+.manual-header img {
+    height: 50px;
+    width: auto;
+    object-fit: contain;
+    margin-bottom: 5px;
+}
+
+.manual-intro {
+    color: var(--color-texto-claro);
+    max-width: 600px;
+    margin: 0 auto 15px;
+    font-size: 0.9rem;
+}
+
+.manual-content {
+    max-width: 900px;
+    margin: 20px auto;
+    background: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.manual-content h1 {
+    color: var(--color-azul-profundo);
+    border-bottom: 3px solid var(--color-dorado);
+    padding-bottom: 10px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.manual-content h2 {
+    color: var(--color-azul-rey);
+    margin-top: 30px;
+    margin-bottom: 15px;
+    border-left: 5px solid var(--color-dorado);
+    padding-left: 10px;
+}
+
+.manual-content h3 {
+    color: var(--color-azul-profundo);
+    margin-top: 20px;
+    margin-bottom: 10px;
+    border-bottom: 1px dashed #ccc;
+    padding-bottom: 5px;
+    text-align: left;
+    font-size: 1.2rem;
+}
+
+.manual-content p, .manual-content ul {
+    margin-bottom: 15px;
+    text-align: justify;
+}
+
+.manual-content ul {
+    padding-left: 30px;
+}
+
+.manual-back-button {
+    display: block;
+    width: 200px;
+    margin: 40px auto 20px;
+    padding: 10px 15px;
+    background-color: var(--color-azul-rey);
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.manual-back-button:hover {
+    background-color: #0056b3;
+}
+
 @media (max-width: 900px) {
+
     .nav {
         flex-wrap: wrap; 
         padding: 0.8rem 3%;
@@ -292,12 +377,11 @@ body {
     }
 
     .nav-list {
-        display: none; 
+        display: none;
         flex-direction: column;
         width: 100%;
         background-color: #002244; 
         box-shadow: 0 4px 5px rgba(0, 0, 0, 0.2);
-        
         position: static; 
         z-index: 900; 
     }
@@ -335,15 +419,18 @@ body {
         font-size: 1.8rem; 
     }
 
-    #mision-vision {
-        flex-direction: column; 
-        gap: 20px;
+    .mision-vision-container {
+        padding: 15px;
     }
 
-    .mision-division,
-    .vision-division {
-        min-width: auto;
+    .map-placeholder {
+        max-width: 100%;
     }
+
+    .map-placeholder iframe {
+        height: 300px;
+    }
+
     .contact-details {
         text-align: center; 
     }
@@ -357,5 +444,14 @@ body {
     .manual-button {
         width: 90%;
         font-size: 1rem;
+    }
+    
+    .manual-content {
+        padding: 15px;
+        margin: 10px;
+    }
+
+    .manual-back-button {
+        width: 90%;
     }
 }
