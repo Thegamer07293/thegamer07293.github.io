@@ -102,7 +102,6 @@ body {
     display: block;
 }
 
-/* --- SECCIÓN HERO --- */
 .hero-section {
     position: relative;
     height: 80vh;
@@ -140,8 +139,6 @@ body {
     font-size: 1.2rem;
     margin-bottom: 2rem;
 }
-
-/* --- CONTENIDO PRINCIPAL --- */
 .main-content {
     padding: 2rem 5%;
 }
@@ -172,7 +169,6 @@ body {
     text-align: justify;
 }
 
-/* Misión y Visión (Flexbox en escritorio) */
 #mision-vision {
     display: flex;
     justify-content: space-around;
@@ -211,8 +207,6 @@ body {
     color: #555;
     font-weight: bold;
 }
-
-/* --- PIE DE PÁGINA --- */
 .footer {
     background-color: var(--color-azul-profundo);
     color: var(--color-texto-claro);
@@ -225,8 +219,6 @@ body {
     margin: 0 auto;
     padding: 20px;
 }
-
-/* Estilo del Botón Manual de Usuario */
 .manual-button {
     display: block;
     width: 250px;
@@ -285,34 +277,24 @@ body {
     font-size: 0.8rem;
     color: #b0c4de;
 }
-
-
-/* ####################################################### */
-/* ############## MEDIA QUERIES (ADAPTACIÓN A MÓVIL) ############# */
-/* ####################################################### */
-
 @media (max-width: 900px) {
-
-    /* El truco: Ocultar la lista y mostrarla solo al pasar el ratón o tocar (solo funciona parcialmente en móvil, pero es la opción sin JS) */
     .nav {
         flex-wrap: wrap; 
         padding: 0.8rem 3%;
-        align-items: flex-start; /* Alinea logo arriba */
+        align-items: flex-start;
     }
 
     .nav-list {
-        display: none; /* Oculta la lista por defecto */
+        display: none; 
         flex-direction: column;
         width: 100%;
         background-color: #002244; 
         box-shadow: 0 4px 5px rgba(0, 0, 0, 0.2);
         
-        /* Ajuste para que la lista aparezca debajo del logo */
         position: static; 
         z-index: 900; 
     }
 
-    /* Al pasar el cursor sobre el NAV (simula menú 'abierto' sin JS) */
     .nav:hover .nav-list {
         display: flex; 
     }
@@ -338,7 +320,6 @@ body {
         padding-left: 10px; 
     }
 
-    /* --- CONTENIDO --- */
     .hero-section {
         height: 50vh; 
     }
@@ -356,8 +337,6 @@ body {
     .vision-division {
         min-width: auto;
     }
-
-    /* --- Contacto y Botón --- */
     .contact-details {
         text-align: center; 
     }
