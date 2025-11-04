@@ -155,46 +155,78 @@ body {
     text-align: center;
 }
 
-.content-section h4 {
-    color: var(--color-azul-profundo);
-    font-size: 1.3rem;
-    margin-bottom: 10px;
-    border-bottom: 2px solid var(--color-dorado);
-    padding-bottom: 5px;
-}
-
 .content-section p {
     max-width: 800px;
     margin: 0.5rem auto;
     text-align: justify;
 }
-
-.mision-vision-container {
-    max-width: 900px;
-    margin: 0 auto;
-    border: 2px dashed var(--color-azul-rey);
-    padding: 20px;
-    background-color: #eaf3ff;
+.carousel-container {
+    max-width: 800px;
+    position: relative;
+    margin: auto;
+    border: 2px solid var(--color-azul-profundo);
     border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 
-.mision-vision-container p {
-    max-width: none;
-    margin: 0;
+.carousel-slide {
+    display: none;
 }
 
-#mision-vision {
-    max-width: 900px;
-    margin: 0 auto;
-    padding: 0;
+.carousel-slide img {
+    width: 100%;
+    height: auto;
+    display: block;
 }
 
-.placeholder-text {
-    text-align: center !important;
-    color: var(--color-azul-profundo);
-    font-style: italic;
-    font-size: 1.1rem;
-    margin: 10px 0 !important;
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: var(--color-texto-claro);
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    background-color: rgba(0,0,0,0.8);
+}
+
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0,0,0,1);
+}
+
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+    background-color: var(--color-azul-rey);
+}
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
 }
 
 .map-placeholder {
