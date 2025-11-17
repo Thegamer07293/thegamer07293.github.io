@@ -6,14 +6,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>L.E ELECTRONICS 2022 C.A. - Soluciones Electrónicas</title>
     <link rel="stylesheet" href="styles.css">
-</head>
+    </head>
 
 <body>
 
     <header class="header">
         <nav class="nav">
+            <input type="checkbox" id="menu-toggle" class="menu-toggle">
+            <label for="menu-toggle" class="menu-icon">&#9776;</label>
+
             <h1 class="logo"><img src="img/logo.png" alt="L.E. E. 2022 C.A. Logo"></h1>
+            
             <ul class="nav-list" id="navMenu">
+                <li><a href="manual.html" class="nav-manual-link">Manual de Usuario</a></li>
+                
                 <li><a href="#inicio">Inicio</a></li>
                 <li class="dropdown">
                     <a href="#informacion">Información </a>
@@ -48,7 +54,7 @@
 
         <section id="que-ofrecemos" class="content-section">
             <h3>¿Qué Ofrecemos? </h3>
-            <p>En L.E ELECTRONICS 2022 C.A., nos especializamos en una amplia gama de accesorios electrónicos de alta calidad. Descubre a continuación algunos de nuestros productos destacados.</p>
+            <p>En L.E ELECTRONICS 2022 C.A., nos especializamos en una amplia gama de accesorios electrónicos electrónicos de alta calidad. Descubre a continuación algunos de nuestros productos destacados.</p>
 
             <div class="carousel-container">
                 <div class="carousel-slide fade">
@@ -60,8 +66,8 @@
                 <div class="carousel-slide fade">
                     <img src="img/" alt="Producto accesorios">
                 </div>
-                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                <a class="prev" onclick="plusSlides(-1)">❮</a>
+                <a class="next" onclick="plusSlides(1)">❯</a>
             </div>
             <br>
             <div style="text-align:center">
@@ -70,6 +76,7 @@
                 <span class="dot" onclick="currentSlide(3)"></span>
             </div>
         </section>
+
         <section id="ubicacion" class="content-section">
             <h3>Ubicación </h3>
             <p>L.E ELECTRONICS 2022 C.A. se ubica en la Parroquia Concepción, municipio Iribarren, estado Lara, Venezuela, dentro de la Urbanización El Obelisco.</p>
@@ -86,19 +93,25 @@
                 </iframe>
             </div>
         </section>
+        
+        <section id="contactenos" class="content-section contact-section">
+             <div class="contact-info-container">
+                <h4>Contáctenos </h4>
+                <p>Puede contactarnos directamente a través de los siguientes números y cuentas:</p>
+                <div class="contact-details">
+                    <p><strong>Teléfono:</strong>04145157190</p>
+                    <p><strong>WhatsApp:</strong> +58 4145157190 <a href="https://wa.me/584145157190" target="_blank">(Enviar mensaje)</a></p>
+                    <p><strong>Instagram:</strong> <a href="https://instagram.com/Le.electronics" target="_blank">@Le.electronics</a></p>
+                    <p><strong>Correo Electrónico:</strong> Luisjoseperdomocontreras@gmail.com</p>
+                </div>
+             </div>
+        </section>
+
     </main>
 
-    <footer id="contactenos" class="footer">
-        <div class="contact-info-container">
-            <h4>Contáctenos </h4>
-            <p>Puede contactarnos directamente a través de los siguientes números y cuentas:</p>
-            <div class="contact-details">
-                <p><strong>Teléfono:</strong>04145157190</p>
-                <p><strong>WhatsApp:</strong> +58 4145157190 <a href="https://wa.me/584145157190" target="_blank">(Enviar mensaje)</a></p>
-                <p><strong>Instagram:</strong> <a href="https://instagram.com/Le.electronics" target="_blank">@Le.electronics</a></p>
-                <p><strong>Correo Electrónico:</strong> Luisjoseperdomocontreras@gmail.com</p>
-            </div>
-            <a href="manual.html" class="manual-button">Manual de Usuario</a>
+    <footer class="footer">
+        <div class="footer-info">
+             <p></p>
         </div>
         <p class="copyright">© 2025 L.E ELECTRONICS 2022 C.A. Todos los derechos reservados.</p>
     </footer>
