@@ -6,6 +6,7 @@
     --color-texto-claro: #ffffff;
 }
 
+/* ========================= ESTILOS BASE ========================= */
 * {
     margin: 0;
     padding: 0;
@@ -23,6 +24,7 @@ body {
     color: #333;
 }
 
+/* ========================= ENCABEZADO Y NAVEGACIÓN (HEADER) ========================= */
 .header {
     background-color: var(--color-azul-profundo);
     position: sticky;
@@ -36,6 +38,7 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 1rem 5%;
+    position: relative; /* Para posicionar el menú desplegable correctamente */
 }
 
 .logo {
@@ -43,6 +46,7 @@ body {
     font-weight: bold;
     height: 40px;
     max-width: 180px;
+    /* Optimización de carga: Asegurar que el tamaño es fijo */
 }
 
 .logo img {
@@ -52,9 +56,21 @@ body {
     object-fit: contain;
 }
 
+/* Menú de Hamburguesa (Desktop - Oculto) */
+.menu-toggle {
+    display: none;
+}
+.menu-icon {
+    display: none; /* Oculto por defecto en desktop */
+    font-size: 2rem;
+    color: var(--color-texto-claro);
+    cursor: pointer;
+}
+
 .nav-list {
     list-style: none;
     display: flex;
+    align-items: center; /* Alineación vertical */
 }
 
 .nav-list a {
@@ -67,6 +83,21 @@ body {
 
 .nav-list a:hover {
     color: var(--color-dorado);
+}
+
+/* Estilo para el enlace del Manual de Usuario en la navegación */
+.nav-manual-link {
+    background-color: var(--color-dorado);
+    color: var(--color-azul-profundo) !important;
+    font-weight: bold;
+    border-radius: 5px;
+    padding: 0.5rem 1rem;
+    margin-right: 10px;
+}
+
+.nav-manual-link:hover {
+    background-color: #e6c200;
+    color: var(--color-azul-profundo) !important;
 }
 
 .dropdown {
@@ -101,6 +132,7 @@ body {
     display: block;
 }
 
+/* ========================= SECCIÓN HERO Y CONTENIDO PRINCIPAL ========================= */
 .hero-section {
     position: relative;
     height: 80vh;
@@ -160,6 +192,8 @@ body {
     margin: 0.5rem auto;
     text-align: justify;
 }
+
+/* ========================= CARRUSEL (SECCIÓN QUE OFRECEMOS) ========================= */
 .carousel-container {
     max-width: 800px;
     position: relative;
@@ -229,6 +263,7 @@ body {
     to {opacity: 1}
 }
 
+/* ========================= SECCIÓN UBICACIÓN ========================= */
 .map-placeholder {
     text-align: center;
     margin: 20px auto;
@@ -247,78 +282,93 @@ body {
     border: none;
 }
 
-.footer {
-    background-color: var(--color-azul-profundo);
-    color: var(--color-texto-claro);
+/* ========================= SECCIÓN CONTÁCTENOS (Separada del Footer) ========================= */
+.contact-section {
+    background-color: var(--color-fondo-claro);
     padding: 40px 5%;
-    text-align: center;
+    border-bottom: none; /* Eliminar el borde inferior en esta sección */
 }
 
 .contact-info-container {
     max-width: 600px;
     margin: 0 auto;
     padding: 20px;
-}
-
-.manual-button {
-    display: block;
-    width: 250px;
-    margin: 25px auto 0;
-    padding: 10px 20px;
-    background-color: var(--color-dorado);
-    color: var(--color-azul-profundo);
-    text-decoration: none;
-    font-weight: bold;
-    border-radius: 5px;
-    transition: background-color 0.3s;
-    font-size: 1.1rem;
-}
-
-.manual-button:hover {
-    background-color: #e6c200;
+    border-radius: 8px;
+    /* Se elimina el manual-button de aquí */
 }
 
 .contact-info-container h4 {
-    color: var(--color-dorado);
+    color: var(--color-azul-profundo);
     font-size: 1.5rem;
     margin-bottom: 1rem;
+    text-align: center;
 }
 
 .contact-details {
     text-align: left;
-    background-color: #1a4f80;
+    background-color: #e9ecef; /* Un color claro para contrastar */
     padding: 20px;
     border-radius: 8px;
+    border: 1px solid #ced4da;
 }
 
 .contact-details p {
     margin: 10px 0;
     font-size: 1.1rem;
+    text-align: left;
 }
 
 .contact-details strong {
-    color: var(--color-dorado);
+    color: var(--color-azul-profundo);
     display: inline-block;
     min-width: 120px;
 }
 
 .contact-details a {
-    color: var(--color-dorado);
+    color: var(--color-azul-rey);
     text-decoration: none;
     transition: color 0.3s;
 }
 
 .contact-details a:hover {
-    color: var(--color-texto-claro);
+    color: var(--color-azul-profundo);
     text-decoration: underline;
 }
 
+/* ========================= PIE DE PÁGINA (FOOTER) ========================= */
+.footer {
+    background-color: var(--color-azul-profundo);
+    color: var(--color-texto-claro);
+    padding: 30px 5%;
+    text-align: center;
+}
+
+.footer-info {
+    max-width: 800px;
+    margin: 0 auto 20px;
+    padding: 10px;
+    border-bottom: 1px solid var(--color-dorado);
+}
+
+.footer-info h4 {
+    color: var(--color-dorado);
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+}
+
+.footer-info p {
+    font-size: 0.95rem;
+    margin-top: 5px;
+    color: #b0c4de;
+}
+
 .copyright {
-    margin-top: 20px;
+    margin-top: 15px;
     font-size: 0.8rem;
     color: #b0c4de;
 }
 
+/* ========================= ESTILOS DE MANUAL DE USUARIO ========================= */
 .manual-header {
     background-color: var(--color-azul-profundo);
     padding: 10px 0;
@@ -400,12 +450,24 @@ body {
     background-color: #0056b3;
 }
 
+/* ========================= MEDIA QUERIES (DISEÑO RESPONSIVO) ========================= */
 @media (max-width: 900px) {
+    /* Mostrar el ícono de hamburguesa y ocultar el menú de navegación por defecto */
+    .menu-icon {
+        display: block;
+        order: 2; /* Para que esté a la derecha */
+    }
 
     .nav {
-        flex-wrap: wrap; 
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
         padding: 0.8rem 3%;
-        align-items: flex-start;
+        flex-wrap: wrap; /* Permite que los elementos se envuelvan */
+    }
+
+    .logo {
+        order: 1; /* Para que el logo esté a la izquierda */
     }
 
     .nav-list {
@@ -414,12 +476,16 @@ body {
         width: 100%;
         background-color: #002244; 
         box-shadow: 0 4px 5px rgba(0, 0, 0, 0.2);
-        position: static; 
-        z-index: 900; 
+        position: absolute; /* Para que se superponga */
+        top: 56px; /* Ajustar debajo del header */
+        left: 0;
+        z-index: 950; 
+        padding-bottom: 10px;
     }
 
-    .nav:hover .nav-list {
-        display: flex; 
+    /* Mostrar el menú cuando el checkbox está marcado (Menú de Hamburguesa CSS) */
+    .menu-toggle:checked ~ .nav-list {
+        display: flex;
     }
 
     .nav-list li {
@@ -427,11 +493,11 @@ body {
         border-top: 1px solid #004d99;
         text-align: center;
     }
-    
+
     .dropdown {
         width: 100%;
     }
-    
+
     .dropdown-content {
         position: static; 
         width: 100%;
@@ -440,7 +506,13 @@ body {
     }
 
     .dropdown-content a {
-        padding-left: 10px; 
+        padding-left: 20px; /* Indentar los sub-ítems */
+    }
+    
+    /* Adaptar el enlace del manual en móvil */
+    .nav-manual-link {
+        margin: 10px auto;
+        width: 80%;
     }
 
     .hero-section {
@@ -451,18 +523,7 @@ body {
         font-size: 1.8rem; 
     }
 
-    .mision-vision-container {
-        padding: 15px;
-    }
-
-    .map-placeholder {
-        max-width: 100%;
-    }
-
-    .map-placeholder iframe {
-        height: 300px;
-    }
-
+    /* Adaptación de Contáctenos en móvil */
     .contact-details {
         text-align: center; 
     }
@@ -473,11 +534,6 @@ body {
         margin-bottom: 0;
     }
 
-    .manual-button {
-        width: 90%;
-        font-size: 1rem;
-    }
-    
     .manual-content {
         padding: 15px;
         margin: 10px;
