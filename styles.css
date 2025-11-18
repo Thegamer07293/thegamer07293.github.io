@@ -212,7 +212,7 @@ body {
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     text-align: center;
     transition: transform 0.3s ease;
-    max-width: 180px;
+    
 }
 
 .product-item:hover {
@@ -222,7 +222,7 @@ body {
 .product-item img {
     width: 100%;
     /* Aseguramos que la altura sea uniforme si las imágenes son similares */
-    height: 150px; 
+    height: 250px; 
     object-fit: cover; /* Ajusta la imagen para cubrir el área sin distorsión */
     display: block;
 }
@@ -498,7 +498,7 @@ body {
     }
     
     .product-item img {
-        height: 180px; /* Hacemos la imagen un poco más grande en móvil */
+        height: 300px; /* Hacemos la imagen un poco más grande en móvil */
     }
 
     .manual-back-button {
