@@ -221,7 +221,7 @@ body {
 .product-item img {
     width: 100%;
     /* Aseguramos que la altura sea uniforme si las imágenes son similares */
-    height: 250px; 
+    height: 150px; 
     object-fit: cover; /* Ajusta la imagen para cubrir el área sin distorsión */
     display: block;
 }
@@ -497,7 +497,7 @@ body {
     }
     
     .product-item img {
-        height: 300px; /* Hacemos la imagen un poco más grande en móvil */
+        height: 200px; /* Hacemos la imagen un poco más grande en móvil */
     }
 
     .manual-back-button {
