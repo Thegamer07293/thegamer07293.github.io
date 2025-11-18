@@ -196,7 +196,7 @@ body {
 /
 /* ========================= GALERÍA DE PRODUCTOS (ESTÁTICA) ========================= */
 .products-grid-container {
-    max-width: 900px;
+    max-width: 100%;
     margin: 2rem auto;
     display: grid;
     /* En escritorio: 3 columnas de igual ancho, con un espacio de 20px */
@@ -490,11 +490,16 @@ body {
     .manual-content {
         padding: 15px;
         margin: 10px;
-    } 
-    .products-grid-container {
-        /* En móvil: 1 columna de ancho completo */
+    }
+       .products-grid-container {
         grid-template-columns: 1fr; 
         gap: 15px;
+        max-width: 100%; 
+        /* Reducir o eliminar el padding lateral aquí */
+        padding: 0 5%; /* Esto coincidirá con el padding del main-content */
+      }
+}
+
     }
     
     .product-item img {
